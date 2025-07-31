@@ -86,7 +86,7 @@ const Education = () => {
                             <span>{edu.duration}</span>
                           </div>
                           <div className="px-2 py-1 bg-primary/20 text-primary rounded-md">
-                            GPA: {edu.gpa}
+                            CGPA: {edu.gpa}
                           </div>
                         </div>
                         <p className="text-muted-foreground text-sm">
