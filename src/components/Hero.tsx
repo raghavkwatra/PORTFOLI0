@@ -172,7 +172,10 @@ const Hero = () => {
           <div className="text-center lg:text-left">
             <div className="mb-6">
               <p className="text-accent text-lg mb-2 font-medium">
-                Hi there, I'm
+                Hi there, I'm{" "}
+                <span className="inline-block animate-wave origin-[70%_70%]">
+                  👋🏻
+                </span>
               </p>
               <h1 className="text-5xl lg:text-7xl font-bold mb-4">
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
