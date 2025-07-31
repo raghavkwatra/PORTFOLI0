@@ -253,19 +253,22 @@ const Hero = () => {
 
           {/* Profile area */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Main circular frame */}
-              <div className="w-72 h-72 rounded-full border border-border/20 p-2">
-                {/* <div className="w-full h-full rounded-full bg-card/50 backdrop-blur-sm flex items-center justify-center relative overflow-hidden"> */}
-                {/* Profile image */}
-                <div className="w-60 h-60 rounded-full overflow-hidden">
-                  <img
-                    src="/lovable-uploads/2dfd3c7e-8eb4-47fa-845d-f1d5c33c04d2.png"
-                    alt="Raghav Kwatra"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* </div> */}
+            <div className="relative group">
+              {/* Outer circular frame */}
+
+              <div className="w-90 h-90 flex items-end justify-end ">
+                {/* Default image */}
+                <img
+                  src="/lovable-uploads/image.png"
+                  alt="Raghav Kwatra"
+                  className="w-80 h-70 w object-cover group-hover:hidden transition-opacity duration-300 ease-in-out scale-75 "
+                />
+                {/* Hover image */}
+                <img
+                  src="/lovable-uploads/2dfd3c7e-8eb4-47fa-845d-f1d5c33c04d2.png"
+                  alt="Raghav Hover"
+                  className="w-80 h-70 object-cover hidden group-hover:block transition-opacity duration-300 ease-in-out"
+                />
               </div>
             </div>
           </div>

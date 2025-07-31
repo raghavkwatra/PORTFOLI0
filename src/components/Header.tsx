@@ -53,12 +53,7 @@ const Header = () => {
             >
               Projects
             </button>
-            <button
-              onClick={() => scrollToSection("skills")}
-              className="text-foreground hover:text-accent transition-colors"
-            >
-              Skills
-            </button>
+
             <button
               onClick={() => scrollToSection("contact")}
               className="text-foreground hover:text-accent transition-colors"
