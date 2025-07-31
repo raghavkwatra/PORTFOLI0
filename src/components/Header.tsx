@@ -31,12 +31,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="text-foreground hover:text-accent transition-colors"
-            >
-              RK
-            </button>
+            <button onClick={() => scrollToSection("hero")}>RK</button>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
