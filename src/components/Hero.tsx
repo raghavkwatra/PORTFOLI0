@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Code } from 'lucide-react';
+import { Github, Mail, Code } from 'lucide-react';
 
 const Hero = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -9,14 +12,43 @@ const Hero = () => {
     }
   };
 
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
+  const LinkedInIcon = () => (
+    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+  );
+
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section 
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      onMouseMove={handleMouseMove}
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-4 h-4 bg-star-glow rounded-full sparkle glow-star"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-star-glow rounded-full sparkle glow-star" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-star-glow rounded-full sparkle glow-star" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-star-glow rounded-full sparkle glow-star" style={{ animationDelay: '0.5s' }}></div>
+        <div 
+          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
+          style={{
+            top: '20%',
+            left: '10%',
+            transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
+          }}
+        ></div>
+        <div 
+          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-40 transition-transform duration-500 ease-out"
+          style={{
+            top: '60%',
+            right: '15%',
+            transform: `translate(${mousePosition.x * -0.015}px, ${mousePosition.y * 0.015}px)`,
+          }}
+        ></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -39,10 +71,10 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8">
               <Button 
                 size="lg" 
-                className="bg-gradient-primary text-primary-foreground hover:opacity-90 glow-primary"
+                className="bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
                 onClick={() => scrollToSection('projects')}
               >
                 View My Work
@@ -50,7 +82,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                className="border-border hover:bg-muted transition-colors"
                 onClick={() => scrollToSection('contact')}
               >
                 Let's Connect
@@ -70,10 +102,10 @@ const Hero = () => {
               <Button 
                 variant="ghost" 
                 size="icon"
-                className="hover:bg-muted hover:text-accent"
+                className="hover:bg-muted hover:text-[#0077b5] transition-colors"
                 onClick={() => window.open('https://linkedin.com/in/raghavkwatra', '_blank')}
               >
-                <Linkedin className="h-5 w-5" />
+                <LinkedInIcon />
               </Button>
               <Button 
                 variant="ghost" 
@@ -94,36 +126,21 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* 3D-like illustration area */}
+          {/* Profile area */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Main circular frame */}
-              <div className="w-80 h-80 rounded-full bg-gradient-secondary p-1 floating">
-                <div className="w-full h-full rounded-full bg-card flex items-center justify-center relative overflow-hidden">
-                  {/* Profile placeholder or actual image */}
-                  <div className="w-64 h-64 rounded-full bg-gradient-primary flex items-center justify-center">
-                    <div className="text-6xl font-bold text-primary-foreground">RK</div>
+              <div className="w-72 h-72 rounded-full border border-border/20 p-2">
+                <div className="w-full h-full rounded-full bg-card/50 backdrop-blur-sm flex items-center justify-center relative overflow-hidden">
+                  {/* Profile image */}
+                  <div className="w-60 h-60 rounded-full overflow-hidden">
+                    <img 
+                      src="/lovable-uploads/2dfd3c7e-8eb4-47fa-845d-f1d5c33c04d2.png" 
+                      alt="Raghav Kwatra" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  
-                  {/* Decorative elements */}
-                  <div className="absolute top-4 right-8 w-8 h-8 bg-star-glow rounded-full sparkle glow-star"></div>
-                  <div className="absolute bottom-8 left-4 w-6 h-6 bg-star-glow rounded-full sparkle glow-star" style={{ animationDelay: '1s' }}></div>
                 </div>
-              </div>
-              
-              {/* Floating code elements */}
-              <div className="absolute -top-4 -right-4 glass rounded-lg p-3 floating" style={{ animationDelay: '0.5s' }}>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-primary rounded-full"></div>
-                  <div className="w-3 h-3 bg-accent rounded-full"></div>
-                  <div className="w-3 h-3 bg-star-glow rounded-full"></div>
-                </div>
-                <div className="mt-2 text-xs text-muted-foreground">Java Spring</div>
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 glass rounded-lg p-3 floating" style={{ animationDelay: '1.5s' }}>
-                <Code className="h-6 w-6 text-accent mb-1" />
-                <div className="text-xs text-muted-foreground">Backend Dev</div>
               </div>
             </div>
           </div>
