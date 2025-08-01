@@ -19,21 +19,13 @@ const About = () => {
             <div>
               <p className="text-lg leading-relaxed mb-6">
                 I'm a dedicated Java Developer with expertise in Spring Boot and
-                Spring Security. My journey in software development has been
-                driven by a passion for creating efficient, scalable, and secure
+                Spring Security, passionate about creating efficient and secure
                 backend systems.
               </p>
-              <p className="text-lg leading-relaxed mb-6">
-                During my internship at Sweatless Solutions, I gained hands-on
-                experience implementing Multi-Factor Authentication (MFA) and
-                working with Spring Security to build robust authentication
-                systems.
-              </p>
               <p className="text-lg leading-relaxed">
-                I enjoy solving complex problems, optimizing system performance,
-                and staying up-to-date with the latest technologies in the Java
-                ecosystem. When I'm not coding, you can find me exploring new
-                frameworks or contributing to open-source projects.
+                During my internship at Sweatless Solutions, I implemented Multi-Factor 
+                Authentication and gained valuable experience with Spring Security. 
+                I enjoy solving complex problems and staying current with Java ecosystem technologies.
               </p>
             </div>
 
