@@ -51,22 +51,7 @@ const Hero = () => {
           />
         ))}
         
-        {/* Larger accent stars */}
-        {Array.from({ length: 8 }).map((_, i) => (
-          <div
-            key={`accent-${i}`}
-            className="absolute w-2 h-2 bg-primary rounded-full opacity-30"
-            style={{
-              top: `${20 + Math.random() * 60}%`,
-              left: `${10 + Math.random() * 80}%`,
-              transform: `translate(${mousePosition.x * 0.03}px, ${
-                mousePosition.y * 0.03
-              }px)`,
-              transition: 'transform 0.2s ease-out',
-            }}
-          />
-        ))}
-      </div>
+
 
       {/* Cursor follower */}
       <div
