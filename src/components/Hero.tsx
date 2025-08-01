@@ -42,8 +42,8 @@ const Hero = () => {
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              transform: `translate(${mousePosition.x * (0.01 + Math.random() * 0.02)}px, ${
-                mousePosition.y * (0.01 + Math.random() * 0.02)
+              transform: `translate(${mousePosition.x * (0.002 + Math.random() * 0.005)}px, ${
+                mousePosition.y * (0.002 + Math.random() * 0.005)
               }px)`,
               animationDelay: `${Math.random() * 3}s`,
               transition: 'transform 0.3s ease-out',
@@ -59,8 +59,8 @@ const Hero = () => {
             style={{
               top: `${20 + Math.random() * 60}%`,
               left: `${10 + Math.random() * 80}%`,
-              transform: `translate(${mousePosition.x * 0.03}px, ${
-                mousePosition.y * 0.03
+              transform: `translate(${mousePosition.x * 0.008}px, ${
+                mousePosition.y * 0.008
               }px)`,
               transition: 'transform 0.2s ease-out',
             }}
