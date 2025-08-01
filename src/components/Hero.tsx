@@ -69,14 +69,14 @@ const Hero = () => {
       </div>
 
       {/* Cursor follower */}
-      {/* <div
+      <div
         className="absolute w-6 h-6 border border-primary/30 rounded-full pointer-events-none transition-all duration-100 ease-out"
         style={{
           left: mousePosition.x - 12,
           top: mousePosition.y - 12,
           transform: 'scale(1)',
         }}
-      /> */}
+      />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
