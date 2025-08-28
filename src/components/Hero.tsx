@@ -171,7 +171,7 @@ const Hero = () => {
           {/* Text content */}
           <div className="text-center lg:text-left">
             <div className="mb-6">
-              <p className="text-accent text-lg mb-2 font-medium">
+              <p className="text-primary text-lg mb-2 font-medium">
                 Hi there, I'm{" "}
                 <span className="inline-block animate-wave origin-[70%_70%]">
                   👋🏻
@@ -248,7 +248,7 @@ const Hero = () => {
                   viewBox="0,0,256,256"
                 >
                   <g
-                    fill="#ffffff"
+                    fill="currentColor"
                     fill-rule="nonzero"
                     stroke="none"
                     stroke-width="1"
