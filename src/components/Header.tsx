@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,18 +63,21 @@ const Header = () => {
             </button>
           </div>
 
-          <Button
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            onClick={() =>
-              window.open(
-                "https://drive.google.com/file/d/1QsYab_sek7v7C0q6QQkY780cZq4UEp0b/view?usp=drive_link",
-                "_blank"
-              )
-            }
-          >
-            Resume
-          </Button>
+          <div className="flex items-center gap-4">
+            <ThemeSwitcher />
+            <Button
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1QsYab_sek7v7C0q6QQkY780cZq4UEp0b/view?usp=drive_link",
+                  "_blank"
+                )
+              }
+            >
+              Resume
+            </Button>
+          </div>
         </div>
       </nav>
     </header>
