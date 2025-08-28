@@ -7,18 +7,29 @@ import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { ScrollAnimator } from "@/components/ScrollAnimator";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Education />
+      <ScrollAnimator>
+        <About />
+      </ScrollAnimator>
+      <ScrollAnimator>
+        <Experience />
+      </ScrollAnimator>
+      <ScrollAnimator>
+        <Projects />
+      </ScrollAnimator>
+      <ScrollAnimator>
+        <Education />
+      </ScrollAnimator>
       {/* <Skills /> */}
-      <Contact />
+      <ScrollAnimator>
+        <Contact />
+      </ScrollAnimator>
       <Footer />
     </div>
   );
