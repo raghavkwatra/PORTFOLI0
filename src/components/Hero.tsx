@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Mail, Code } from "lucide-react";
+import VantaBackground from "./VantaBackground";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -32,6 +33,7 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       onMouseMove={handleMouseMove}
     >
+      <VantaBackground />
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div
