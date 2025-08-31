@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import CLOUDS from 'vanta/dist/vanta.clouds.min';
-import { useTheme } from 'next-themes';
+import { useState, useEffect, useRef } from "react";
+import * as THREE from "three";
+import CLOUDS from "vanta/dist/vanta.clouds.min";
+import { useTheme } from "next-themes";
 
 const VantaBackground = () => {
   const [vantaEffect, setVantaEffect] = useState<any>(null);
@@ -9,7 +9,7 @@ const VantaBackground = () => {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    if (resolvedTheme === 'dark' && !vantaEffect) {
+    if (resolvedTheme === "dark" && !vantaEffect) {
       setVantaEffect(
         CLOUDS({
           el: vantaRef.current,
@@ -28,7 +28,7 @@ const VantaBackground = () => {
           speed: 0.9,
         })
       );
-    } else if (resolvedTheme === 'light' && vantaEffect) {
+    } else if (resolvedTheme === "light" && vantaEffect) {
       vantaEffect.destroy();
       setVantaEffect(null);
     }

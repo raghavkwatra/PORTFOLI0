@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { ScrollAnimator } from "@/components/ScrollAnimator";
+import VantaBackground from "@/components/VantaBackground";
 
 const Index = () => {
   return (
@@ -31,6 +32,7 @@ const Index = () => {
         <Contact />
       </ScrollAnimator>
       <Footer />
+      <VantaBackground />
     </div>
   );
 };

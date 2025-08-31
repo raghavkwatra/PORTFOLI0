@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Mail, Code } from "lucide-react";
-import VantaBackground from "./VantaBackground";
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -33,140 +32,7 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       onMouseMove={handleMouseMove}
     >
-      <VantaBackground />
       {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "20%",
-            left: "20%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "20%",
-            left: "40%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "30%",
-            left: "10%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "40%",
-            left: "50%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "70%",
-            left: "70%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "80%",
-            left: "60%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "40%",
-            left: "70%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "30%",
-            left: "80%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "50%",
-            left: "80%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "90%",
-            left: "80%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "90%",
-            left: "10%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "80%",
-            left: "10%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-        <div
-          className="absolute w-2 h-2 bg-star-glow rounded-full opacity-60 transition-transform duration-300 ease-out"
-          style={{
-            top: "90%",
-            left: "20%",
-            transform: `translate(${mousePosition.x * 0.02}px, ${
-              mousePosition.y * 0.02
-            }px)`,
-          }}
-        ></div>
-      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
