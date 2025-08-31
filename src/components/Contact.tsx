@@ -223,7 +223,7 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="bg-background border-border focus:border-primary"
+                    className="border-border focus:border-primary"
                     placeholder="Your full name"
                   />
                 </div>
@@ -242,7 +242,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-background border-border focus:border-primary"
+                    className="border-border focus:border-primary"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -260,7 +260,7 @@ const Contact = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="bg-background border-border focus:border-primary min-h-[120px]"
+                    className="border-border focus:border-primary min-h-[120px]"
                     placeholder="Tell me about your project, opportunity, or just say hello..."
                   />
                 </div>
