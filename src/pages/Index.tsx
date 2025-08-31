@@ -8,11 +8,9 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { ScrollAnimator } from "@/components/ScrollAnimator";
-import VantaBackground from "@/components/VantaBackground";
-
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Header />
       <Hero />
       <ScrollAnimator>
@@ -32,7 +30,6 @@ const Index = () => {
         <Contact />
       </ScrollAnimator>
       <Footer />
-      <VantaBackground />
     </div>
   );
 };
