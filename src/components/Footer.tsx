@@ -102,7 +102,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="p-2 bg-muted rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors"
                 >
-                  <LeetCodeIcon />
+                  <LeetCodeIcon className="w-4 h-4" />
                 </a>
               </div>
             </div>

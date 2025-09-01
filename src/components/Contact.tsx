@@ -77,7 +77,7 @@ const Contact = () => {
       color: "hover:text-blue-400",
     },
     {
-      icon: <LeetCodeIcon />,
+      icon: <LeetCodeIcon className="h-6 w-6" />,
       title: "LeetCode",
       username: "@raghavkwatra",
       link: "https://leetcode.com/u/raghavkwatra/",

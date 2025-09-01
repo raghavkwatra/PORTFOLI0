@@ -2,7 +2,11 @@
 
 import { useTheme } from "next-themes";
 
-const LeetCodeIcon = () => {
+interface LeetCodeIconProps {
+  className?: string;
+}
+
+const LeetCodeIcon = ({ className }: LeetCodeIconProps) => {
   const { resolvedTheme } = useTheme();
   const fillColor = resolvedTheme === "dark" ? "#ffffff" : "#000000";
 
@@ -12,7 +16,7 @@ const LeetCodeIcon = () => {
       x="0px"
       y="0px"
       viewBox="0,0,256,256"
-      className="h-6 w-6"
+      className={className || "h-6 w-6"}
     >
       <g
         fill={fillColor}
