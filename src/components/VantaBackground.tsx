@@ -9,7 +9,8 @@ const VantaBackground = () => {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    if (resolvedTheme === "dark" && !vantaEffect) {
+    if (!vantaEffect) {
+      const isDark = resolvedTheme === "dark";
       setVantaEffect(
         CLOUDS({
           el: vantaRef.current,
@@ -19,18 +20,15 @@ const VantaBackground = () => {
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
-          backgroundColor: 0x0,
-          skyColor: 0x0,
-          cloudColor: 0x0,
-          sunColor: 0xc3986f,
-          sunGlareColor: 0x0,
-          sunlightColor: 0xf06b00,
+          skyColor: isDark ? 0x0 : 0x87ceeb,
+          cloudColor: isDark ? 0x0 : 0xffffff,
+          cloudShadowColor: isDark ? 0x0 : 0x1e293b,
+          sunColor: isDark ? 0xc3986f : 0xffd700,
+          sunGlareColor: isDark ? 0x0 : 0xffffe0,
+          sunlightColor: isDark ? 0xf06b00 : 0xffffe0,
           speed: 0.9,
         })
       );
-    } else if (resolvedTheme === "light" && vantaEffect) {
-      vantaEffect.destroy();
-      setVantaEffect(null);
     }
 
     return () => {
@@ -40,7 +38,7 @@ const VantaBackground = () => {
     };
   }, [resolvedTheme, vantaEffect]);
 
-  return <div ref={vantaRef} className="absolute inset-0 z-0" />;
+  return <div ref={vantaRef} className="fixed inset-0 z-0" />;
 };
 
 export default VantaBackground;
