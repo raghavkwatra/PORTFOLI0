@@ -15,9 +15,9 @@ const Footer = () => {
                 Raghav Kwatra
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Java Backend Developer passionate about building robust and
-                scalable backend solutions. Always learning and growing in the
-                world of technology.
+                I am trying with AI automation with n8n and i have some
+                experience in java devlopment. currently shifting towards AI/ML
+                and React.js
               </p>
             </div>
 

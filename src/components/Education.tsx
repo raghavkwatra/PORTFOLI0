@@ -23,19 +23,19 @@ const Education = () => {
   const certifications = [
     {
       title: "Java Programming Certification",
-      issuer: "Oracle",
+      issuer: "Udemy",
       year: "2024",
       icon: <Award className="h-5 w-5" />,
     },
     {
       title: "Spring Framework Certification",
-      issuer: "VMware",
+      issuer: "Udemy",
       year: "2024",
       icon: <Award className="h-5 w-5" />,
     },
     {
-      title: "Spring Security Certification",
-      issuer: "Spring Academy",
+      title: "Data Structures and Algorithms Certification",
+      issuer: "Udemy",
       year: "2024",
       icon: <Award className="h-5 w-5" />,
     },
@@ -136,9 +136,7 @@ const Education = () => {
                 </h4>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   I believe in continuous learning and staying updated with the
-                  latest technologies. Currently pursuing advanced
-                  certifications in microservices architecture and cloud
-                  technologies to expand my backend development expertise.
+                  latest technologies.
                 </p>
               </div>
             </div>

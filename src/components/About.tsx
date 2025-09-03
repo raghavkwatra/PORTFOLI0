@@ -20,23 +20,54 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg leading-relaxed mb-6">
-                  I'm a dedicated Java Developer with expertise in Spring Boot
-                  and Spring Security. My journey in software development has
-                  been driven by a passion for creating efficient, scalable, and
-                  secure backend systems.
+                  I’m a software developer experienced in backend systems,
+                  automation, and AI-driven solutions . I work with{" "}
+                  <span className="font-semibold text-primary">
+                    React, JavaScript, and n8n
+                  </span>
+                  , and I explore{" "}
+                  <span className="font-semibold text-primary">
+                    Machine Learning (ML) and Deep Learning (DL)
+                  </span>
+                  .
                 </p>
+
                 <p className="text-lg leading-relaxed mb-6">
-                  During my internship at Sweatless Solutions, I gained hands-on
-                  experience implementing Multi-Factor Authentication (MFA) and
-                  working with Spring Security to build robust authentication
-                  systems.
+                  At{" "}
+                  <span className="font-semibold text-primary">
+                    Sweatless Solutions
+                  </span>
+                  , I built{" "}
+                  <span className="font-semibold text-primary">
+                    secure authentication systems
+                  </span>
+                  , including{" "}
+                  <span className="font-semibold text-primary">
+                    Multi-Factor Authentication (MFA)
+                  </span>
+                  .
                 </p>
+
                 <p className="text-lg leading-relaxed">
-                  I enjoy solving complex problems, optimizing system
-                  performance, and staying up-to-date with the latest
-                  technologies in the Java ecosystem. When I'm not coding, you
-                  can find me exploring new frameworks or contributing to
-                  open-source projects.
+                  One of my key projects,{" "}
+                  <span className="font-semibold text-primary">
+                    Scheduler AI
+                  </span>
+                  , integrates{" "}
+                  <span className="font-semibold text-primary">
+                    Google Sheets, n8n, React, and AI calling services
+                  </span>
+                  . It{" "}
+                  <span className="font-semibold text-primary">
+                    automated lead handling
+                  </span>{" "}
+                  and made
+                  <span className="font-semibold text-primary">
+                    {" "}
+                    cold calling 100% faster
+                  </span>{" "}
+                  for clients by streamlining scheduling, follow-ups, and
+                  dashboard updates.
                 </p>
               </div>
 
@@ -60,7 +91,7 @@ const About = () => {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Interests</span>
-                      <span>Spring Boot, Security</span>
+                      <span>AI automation, React</span>
                     </div>
                   </div>
                 </div>

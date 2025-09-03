@@ -6,29 +6,47 @@ import {
   Shield,
   Database,
   Code,
+  Brain,
 } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Spam Mail Detection System",
+      title: "Schedular AI",
       description:
-        "Machine learning-based email classification system that automatically detects and filters spam emails using advanced algorithms and natural language processing techniques.",
-      tech: [
-        "Python",
-        "Machine Learning",
-        "NLP",
-        "Data Analysis",
-        "Email Processing",
-      ],
-      github: "https://github.com/raghavkwatra",
+        "Scheduler AI Helps the real estate agent do the cold calling faster .Worked with many real estate agents to boost their leads",
+      tech: ["React", "N8N", "Java Script", "WebHooks"],
+      github: "https://github.com/raghavkwatra/SchedularAI",
+      deploy: "https://schedularai.netlify.app/",
       features: [
-        "Advanced ML algorithms for spam detection",
-        "Natural Language Processing ",
+        "Made cold calling 100% faster for my clients",
+        "Very interactive Front end ",
         "High accuracy classification system",
         "Real-time email processing",
       ],
-      icon: <Mail className="h-6 w-6" />,
+      icon: <Brain className="h-6 w-6" />,
+    },
+
+    {
+      title: "ISL Translator",
+      description:
+        "Built a bidirectional Indian Sign Language Generator & Translator that converts text/voice to ISL video and gesture (image/video) to text/voice using deep learning and computer vision.",
+      tech: [
+        "Natural Language Processing",
+        "CNN",
+        "LSTM",
+        "Pyton",
+        "Tensor Flow",
+        "Open CV",
+      ],
+      github: "https://github.com/raghavkwatra",
+      features: [
+        "Made To help the socity",
+        "Voice ---> ISL with 95% accuracy",
+        "JWT token management",
+        "Secure session handling",
+      ],
+      icon: <Shield className="h-6 w-6" />,
     },
     {
       title: "School Management WebApp",
@@ -43,20 +61,6 @@ const Projects = () => {
         "Attendance management system",
       ],
       icon: <Database className="h-6 w-6" />,
-    },
-    {
-      title: "Security Authentication System",
-      description:
-        "Robust authentication and authorization system built with Spring Security, featuring multi-factor authentication, role-based access control, and secure session management.",
-      tech: ["Java", "Spring Security", "Spring Boot", "JWT", "MFA"],
-      github: "https://github.com/raghavkwatra",
-      features: [
-        "Multi-Factor Authentication (MFA)",
-        "Role-based access control",
-        "JWT token management",
-        "Secure session handling",
-      ],
-      icon: <Shield className="h-6 w-6" />,
     },
   ];
 
@@ -147,7 +151,7 @@ const Projects = () => {
                     variant="ghost"
                     size="sm"
                     className="hover:bg-muted hover:text-accent"
-                    onClick={() => window.open(project.github, "_blank")}
+                    onClick={() => window.open(project.deploy, "_blank")}
                   >
                     <ExternalLink className="h-4 w-4" />
                   </Button>
