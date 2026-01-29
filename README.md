@@ -14,3 +14,4 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+<img width="1149" height="635" alt="image" src="https://github.com/user-attachments/assets/6c505197-a933-4ec4-8a05-279b4399add4" />
